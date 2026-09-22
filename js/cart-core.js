@@ -7,6 +7,15 @@
   var listeners = [];
   var items = read();
 
+  // ---- fly-to-cart animation settings ----
+  var FLY_HOLD_MS = 500;                          // pause before the image starts moving, in ms
+  var FLY_DURATION_MS = 2200;                       // how long the move to the cart takes, in ms
+  var FLY_EASING = "cubic-bezier(.25,.1,.25,1)";   // ease-in-out curve for a smooth start/finish
+  var FLY_END_SCALE = .15;                         // size the image shrinks to as it nears the cart
+  var FLY_END_OPACITY = .4;                        // opacity the image fades to as it nears the cart
+  var FLY_CLEANUP_BUFFER_MS = 20;                  // extra time after the animation before removing the element
+  var FLY_CLEANUP_MS = FLY_HOLD_MS + FLY_DURATION_MS + FLY_CLEANUP_BUFFER_MS; // total time before cleanup (fallback path only)
+
   function read() {
     try { return JSON.parse(localStorage.getItem(KEY)) || {}; }
     catch (e) { return {}; }
@@ -92,19 +101,21 @@
       var anim = fly.animate(
         [
           { transform: "translate(0, 0) scale(1)", opacity: 1 },
-          { transform: "translate(" + dx + "px, " + dy + "px) scale(.15)", opacity: .4 }
+          { transform: "translate(" + dx + "px, " + dy + "px) scale(" + FLY_END_SCALE + ")", opacity: FLY_END_OPACITY }
         ],
-        { duration: 900, delay: 150, easing: "cubic-bezier(.25,.1,.25,1)", fill: "forwards" }
+        { duration: FLY_DURATION_MS, delay: FLY_HOLD_MS, easing: FLY_EASING, fill: "forwards" }
       );
       anim.onfinish = function () { fly.remove(); };
     } else {
       // Web Animations API unavailable: fall back to a CSS transition.
-      fly.style.transition = "transform .9s cubic-bezier(.25,.1,.25,1) .15s, opacity .9s .15s";
+      var holdSec = FLY_HOLD_MS / 1000;
+      var durSec = FLY_DURATION_MS / 1000;
+      fly.style.transition = "transform " + durSec + "s " + FLY_EASING + " " + holdSec + "s, opacity " + durSec + "s " + holdSec + "s";
       requestAnimationFrame(function () {
-        fly.style.transform = "translate(" + dx + "px, " + dy + "px) scale(.15)";
-        fly.style.opacity = ".4";
+        fly.style.transform = "translate(" + dx + "px, " + dy + "px) scale(" + FLY_END_SCALE + ")";
+        fly.style.opacity = FLY_END_OPACITY;
       });
-      setTimeout(function () { fly.remove(); }, 1070);
+      setTimeout(function () { fly.remove(); }, FLY_CLEANUP_MS);
     }
   }
 
