@@ -3,20 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snacks &amp; Munchies | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Snacks &amp; Munchies</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "snacks-munchies",          // file name without .html; also image folder + cart id prefix
+  title: "Snacks & Munchies",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    ["Bingo Mad Angles Achaari Masti Crisps", "60 g", 19, 20],
+    ["Lay's India's Magic Masala Potato Chips", "58 g", 21, 25],
+    ["Britannia Toastea Premium Bake Rusk", "250 g", 42, 50],
+    ["Parle Real Elaichi Premium Rusk", "291.2 g", 54, 60],
+    ["Yoga Bar Chocolate Chunk Nut Multigrain Energy Bar", "35 g", 33, 45],
+    ["RiteBite Max Protein Daily Choco Almond Bar", "50 g", 70, 71],
+    ["Doritos Cheese Nachos", "71 g", 35],
+    ["Cornitos Sizzlin Jalapeno Nachos Chips", "65 g", 57, 60],
+    ["Haldiram's Bhujia", "200 g", 60],
+    ["Haldiram's Aloo Bhujia", "210 g", 55],
+    ["ACT II Classic Caramel Popcorn", "70 g", 70],
+    ["4700BC Himalayan Salt Caramel Popcorn", "125 g", 44, 88],
+    ["Haldiram's Classic Salted Peanuts", "200 g", 60],
+    ["Haldiram's Moong Dal Namkeen", "200 g", 60],
+    ["Nutraj Himalayan Pink Salt Flavoured Makhana", "70 g", 155, 278],
+    ["Mr. Makhana Pudina Party Flavoured Makhana", "21 g", 47, 50],
+    ["Lijjat Plain Urad Dal Papad", "200 g", 80],
+    ["Ramji Mix Fryums", "200 g", 58, 80],
+    ["Kettle Studio Potato Chips - Himalayan Pink Salt", "113 g", 99],
+    ["Cheetos Crunchy Cheese Flavoured Crisps", "99.2 g", 449],
+    ["True Elements Dark Chocolate Granola", "700 g", 475],
+    ["Yoga Bar Muesli - Almond & Quinoa Crunch", "400 g", 390],
+    ["4700BC Nutty Tuxedo Chocolate Gourmet Popcorn Tin", "375 g", 523, 550],
+    ["Open Secret Healthy Cookie Namkeen Snacks Combo", "334 g", 481, 534]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

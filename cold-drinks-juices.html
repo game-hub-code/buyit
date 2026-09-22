@@ -3,20 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cold Drinks &amp; Juices | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Cold Drinks &amp; Juices</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "cold-drinks-juices",          // file name without .html; also image folder + cart id prefix
+  title: "Cold Drinks & Juices",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Beverages Gift Packs
+    ["Coca-Cola Gift Pack", "6 x 250 ml", 180, 210],
+    ["Tropicana Juice Gift Pack", "4 x 200 ml", 160],
+    // Soft Drinks
+    ["Coca-Cola", "750 ml", 40, 45],
+    ["Pepsi", "2.25 L", 95, 105],
+    // Fruit Juice
+    ["Real Fruit Power Mixed Fruit", "1 L", 110, 120],
+    ["Tropicana Guava Delight", "1 L", 115],
+    // Mango Drinks
+    ["Maaza Mango Drink", "1.2 L", 75, 80],
+    ["Slice Mango Drink", "1.2 L", 78, 85],
+    // Pure Juices
+    ["Tropicana 100% Orange Juice", "1 L", 130, 145],
+    ["Real 100% Pomegranate Juice", "1 L", 150],
+    // Concentrates & Syrups
+    ["Hamdard Rooh Afza Syrup", "750 ml", 210, 235],
+    ["Kissan Orange Squash", "700 ml", 140],
+    // Herbal Drinks
+    ["Patanjali Amla Juice", "1 L", 110, 125],
+    ["Kapiva Aloe Vera Juice", "1 L", 299, 349],
+    // Energy Drinks
+    ["Red Bull Energy Drink", "250 ml", 125],
+    ["Monster Energy", "350 ml", 110, 125],
+    // Coconut Water
+    ["Real Activ Coconut Water", "200 ml", 40, 45],
+    ["Raw Pressery Tender Coconut Water", "200 ml", 55],
+    // Lassi, Shakes & More
+    ["Amul Lassi", "200 ml", 25],
+    ["Amul Kool Chocolate Milkshake", "200 ml", 30, 35],
+    // Water & Ice Cubes
+    ["Bisleri Mineral Water", "1 L", 20],
+    ["Ice Cubes", "500 g", 30],
+    // Cold Coffee & Ice Tea
+    ["Nescafe Ready-to-Drink Cold Coffee", "180 ml", 60, 70],
+    ["Lipton Peach Ice Tea", "250 ml", 40],
+    // Soda & Mixers
+    ["Bisleri Club Soda", "750 ml", 25],
+    ["Schweppes Tonic Water", "300 ml", 65, 75],
+    // Imported Beverages
+    ["San Pellegrino Sparkling Water", "750 ml", 195],
+    ["Ramune Japanese Soda", "200 ml", 220, 250]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

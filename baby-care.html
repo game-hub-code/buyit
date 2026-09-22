@@ -3,20 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Baby Care | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Baby Care</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "baby-care",          // file name without .html; also image folder + cart id prefix
+  title: "Baby Care",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Diapers & More
+    ["Pampers Active Baby Diaper Pants (M)", "56 pcs", 699, 899],
+    ["MamyPoko Pants Extra Absorb (M)", "58 pcs", 649, 799],
+    // Bathing Needs
+    ["Johnson's Baby Head-to-Toe Wash", "200 ml", 150, 175],
+    ["Himalaya Gentle Baby Soap", "75 g", 55, 62],
+    // Baby Wipes
+    ["Pampers Aloe Vera Baby Wipes", "72 pcs", 175, 225],
+    ["Himalaya Gentle Baby Wipes", "72 pcs", 165, 199],
+    // Baby Food
+    ["Cerelac Wheat Apple Cherry (Stage 2)", "300 g", 250, 270],
+    ["Nestle NAN PRO 2 Follow-Up Formula", "400 g", 610, 650],
+    // Skin & Hair Care
+    ["Johnson's Baby Lotion", "200 ml", 190, 215],
+    ["Himalaya Gentle Baby Shampoo", "200 ml", 150, 175],
+    // Feeding Essentials
+    ["Philips Avent Natural Feeding Bottle", "260 ml", 800, 899],
+    ["LuvLap Anti-Colic Baby Feeding Bottle", "250 ml", 250, 299],
+    // Oral & Nasal Care
+    ["Mee Mee Baby Nasal Aspirator", "1 pc", 120, 149],
+    ["LuvLap Baby Finger Toothbrush", "1 pc", 99, 125],
+    // Nursing
+    ["Pigeon Manual Breast Pump", "1 pc", 1150, 1399],
+    ["LuvLap Disposable Nursing Pads", "24 pcs", 199, 249],
+    // Baby Gifting & Toys
+    ["Funskool Giggles Rattle Set", "1 set", 280, 350],
+    ["Fisher-Price Newborn Gift Set", "1 set", 899, 1099],
+    // Hygiene
+    ["Mee Mee Baby Laundry Liquid Detergent", "1.2 L", 299, 350],
+    ["Johnson's Baby Powder", "200 g", 135, 155],
+    // Mom Care Needs
+    ["Mamaearth Anti Stretch Marks Cream", "100 g", 349, 399],
+    ["Mee Mee Maternity Pads", "10 pcs", 180, 220],
+    // Health & Safety
+    ["Dr Trust Digital Thermometer", "1 pc", 199, 299],
+    ["LuvLap Baby Safety Corner Guards", "8 pcs", 249, 299],
+    // Baby Accessories & Apparel
+    ["Mee Mee Baby Socks (Pack of 3)", "3 pairs", 150, 199],
+    ["Babyhug Cotton Bibs", "3 pcs", 199, 249],
+    // Baby Gear
+    ["LuvLap Sunshine Compact Baby Stroller", "1 pc", 3999, 5499],
+    ["R for Rabbit Cuddle Baby Bouncer", "1 pc", 2999, 3999]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

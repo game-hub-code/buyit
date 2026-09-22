@@ -3,20 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fruits &amp; Vegetables | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Fruits &amp; Vegetables</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "fruits-vegetables",
+  title: "Fruits & Vegetables",
+  adult: false,
+  products: [
+    ["Tomatoes", "500 g", 25, 30],
+    ["Onions", "1 kg", 40, 45],
+    ["Bananas", "6 pcs", 35, 40],
+    ["Oranges", "3 pcs", 60, 70],
+    ["Custard Apple (Sitaphal)", "2 pcs", 80, 100],
+    ["Pomegranate", "2 pcs", 90, 110],
+    ["Raw Jackfruit", "500 g", 55, 65],
+    ["Green Peas", "250 g", 30, 35],
+    ["Dragon Fruit", "1 pc", 250, 180],
+    ["Avocado", "250 g", 130, 160],
+    ["Microgreens Mix", "100 g", 80, 95],
+    ["Green Chana", "200 g", 30, 35],
+    ["Frozen Mixed Vegetables", "500 g", 75, 90],
+    ["Frozen Corn Kernels", "500 g", 65, 80],
+    ["Spinach", "250 g", 20, 25],
+    ["Coriander", "100 g", 15, 20],
+    ["Organic Carrots", "500 g", 55, 65],
+    ["Organic Tomatoes", "500 g", 70, 85],
+    ["Marigold Flowers", "100 g", 40, 50],
+    ["Curry Leaves", "50 g", 15, 20],
+    ["Hydroponic Lettuce", "150 g", 90, 110],
+    ["Hydroponic Basil", "50 g", 60, 75],
+    ["Mixed Fruit Juice", "500 ml", 75, 90],
+    ["Green Chutney", "200 g", 45, 55],
+    ["Guava", "4 pcs", 60, 75],
+    ["Papaya", "1 pc", 65, 80],
+    ["Fuji Apple", "4 pcs", 120, 140],
+    ["Nashpati (Pear)", "4 pcs", 90, 110]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

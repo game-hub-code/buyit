@@ -3,20 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pet Care | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Pet Care</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<script>
+window.SECTION = {
+  slug: "pet-care",
+  title: "Pet Care",
+  adult: false,
+  products: [
+    // Accessories & Other Supplies
+    ["Trixie Pet Waste Bags", "4 rolls (60 bags)", 199, 249],
+    ["Ferplast Atlas 10 Carrier Bag", "1 pc", 899, 1099],
+
+    // Cat Needs
+    ["Whiskas Adult Dry Cat Food (Ocean Fish)", "480 g", 145, 160],
+    ["Catit Senses 2.0 Food Tree", "1 pc", 1299, 1599],
+
+    // Diverse Pet Food
+    ["Taiyo Pluss Discovery Goldfish Food", "100 g", 89, 110],
+    ["Boltz Small Animal Hamster Food Mix", "400 g", 199, 249],
+
+    // Dog Needs
+    ["Pedigree Adult Dry Dog Food (Chicken & Vegetables)", "3 kg", 649, 750],
+    ["Drools Focus Adult Super Premium Dog Food", "3 kg", 799, 950],
+
+    // Pet Grooming
+    ["Wahl Pet-Pro Dog Clipper Kit", "1 pc", 2199, 2799],
+    ["TropiClean Oatmeal & Tea Tree Pet Shampoo", "473 ml", 699, 849]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

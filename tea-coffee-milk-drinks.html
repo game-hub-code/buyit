@@ -3,20 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tea, Coffee &amp; Milk Drinks | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Tea, Coffee &amp; Milk Drinks</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "tea-coffee-milk-drinks",
+  title: "Tea, Coffee & Milk Drinks",
+  adult: false,
+  products: [
+    // Tea
+    ["Tata Tea Gold", "250 g", 125],
+    ["Brooke Bond Red Label", "250 g", 140],
+
+    // Coffee
+    ["Nescafe Classic Instant Coffee", "90 g", 369, 410],
+    ["BRU Instant Coffee", "100 g", 279, 310],
+
+    // Milk Drinks
+    ["Horlicks Nutrition Drink", "500 g", 229],
+    ["Complan Nutrition Drink", "500 g", 241.53, 249],
+
+    // Green & Flavoured Tea
+    ["Lipton Honey Lemon Green Tea", "100 g", 170],
+    ["Organic India Tulsi Green Tea Classic", "43.5 g", 228, 240],
+
+    // Herbal Drinks — [UNKNOWN] no verified retail match found — SKIPPED
+
+    // Hot Chocolate
+    ["Bournvita Chocolate Nutrition Drink", "500 g", 202.73, 209],
+    ["Bournvita 5 Star Magic Nutrition Drink", "500 g", 242.5, 250],
+
+    // Energy Drinks
+    ["Red Bull Energy Drink", "250 ml", 125],
+    ["Monster Energy Drink", "350 ml", 113, 125],
+
+    // Lassi, Shakes & More
+    ["Amul Rose Lassi", "1 L", 90],
+    ["Cavins Chocolate Milkshake", "1 L", 120, 150],
+
+    // Cold Coffee & Ice Tea
+    ["Sleepy Owl Classic Cold Coffee", "230 ml", 108.13, 125],
+    ["Nescafe Iced Latte Cold Coffee", "170 ml", 50],
+
+    // Tea & Coffee Add-Ons — [UNKNOWN] not verified — SKIPPED
+
+    // Lactose Free Drink
+    ["Sofit Soya Naturally Sugar Free Drink", "180 ml", 38.8, 40],
+
+    // Herbal Infusion
+    ["Twinings Camomile Tea", "25 g (25 bags)", 375.25, 395],
+
+    // Imported Tea & Coffee
+    ["Twinings English Breakfast Tea", "200 g", 1092, 1150],
+    ["Twinings English Classics Breakfast Tea", "25 pcs", 327.75, 345]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

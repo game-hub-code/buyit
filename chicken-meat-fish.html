@@ -3,20 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chicken, Meat &amp; Fish | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Chicken, Meat &amp; Fish</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "chicken-meat-fish",          // file name without .html; also image folder + cart id prefix
+  title: "Chicken, Meat & Fish",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Fresh Meat
+    ["Licious Chicken Curry Cut - Small Pieces", "500 g", 190, 215],
+    ["Licious Chicken Mince (Keema)", "500 g", 240, 275],
+    // Eggs
+    ["Eggoz Protein Rich White Eggs", "6 pcs", 70, 78],
+    ["Keggs Farm Fresh Brown Eggs", "6 pcs", 75, 85],
+    // Frozen Non-Veg Snacks
+    ["Venky's Chicken Nuggets", "250 g", 165, 190],
+    ["Godrej Yummiez Chicken Popcorn", "250 g", 170, 195],
+    // Chicken
+    ["Licious Chicken Breast - Boneless", "450 g", 265, 300],
+    ["FreshToHome Chicken Drumsticks", "500 g", 190, 220],
+    // Mutton
+    ["Licious Goat Curry Cut - Bone-in", "500 g", 650, 720],
+    ["FreshToHome Goat Meat Curry Cut", "500 g", 640, 700],
+    // Fish & Seafood
+    ["Licious Rohu Fish Curry Cut", "500 g", 260, 300],
+    ["Licious Tiger Prawns - Cleaned & Deveined", "250 g", 330, 380],
+    // Sausage, Salami & Ham
+    ["Prasuma Chicken Cocktail Sausages", "250 g", 165, 190],
+    ["Godrej Yummiez Chicken Salami", "200 g", 190, 220],
+    // Exotic Meat
+    ["Licious Turkey Breast", "500 g", 550, 620],
+    ["FreshToHome Quail (Cleaned)", "500 g", 420, 480],
+    // Plant Based Meat
+    ["GoodDot Soya Chunks Plant Based Chicken Style Nuggets", "250 g", 185, 215],
+    ["Blue Tribe Foods Plant Based Chicken Seekh Kebab", "200 g", 225, 260]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

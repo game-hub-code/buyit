@@ -3,20 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Breakfast &amp; Instant Food | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Breakfast &amp; Instant Food</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "breakfast-instant-food",          // file name without .html; also image folder + cart id prefix
+  title: "Breakfast & Instant Food",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    ["Maggi 2 Minutes Instant Noodles", "420 g", 79, 90],
+    ["Yippee Magic Masala Instant Noodles with Added Veggies", "435.6 g", 81, 90],
+    ["McCain French Fries (Frozen)", "420 g", 117, 129],
+    ["Godrej Yummiez Cheesy Pizza Fingers", "250 g", 84, 150],
+    ["ITC Master Chef Chicken Seekh Kebab", "500 g", 286, 350],
+    ["Godrej Yummiez Chicken Nuggets", "450 g", 230, 320],
+    ["Del Monte Durum Wheat Pasta - Penne Rigate", "500 g", 149, 280],
+    ["Bambino Pasta - Penne", "250 g", 50],
+    ["Gits Khaman Dhokla Snack Mix", "500 g", 121, 132],
+    ["MTR Masala Rava Idli Mix", "500 g", 125, 133],
+    ["Yoga Bar Chocolate Chunk Nut Multigrain Energy Bar", "35 g", 33, 45],
+    ["The Whole Truth Double Cocoa Protein Bar", "52 g", 90],
+    ["Knorr Thick Tomato Soup", "51 g", 61, 64],
+    ["Knorr Classic Sweet Corn Vegetable Soup", "42 g", 61, 64],
+    ["Safal Frozen Green Peas", "500 g", 135],
+    ["Safal Frozen Mixed Vegetables", "500 g", 99],
+    ["Haldiram's Minute Khana Dal Makhani Ready to Eat", "300 g", 89],
+    ["Heinz Baked Beans in Tomato Sauce", "415 g", 172, 199],
+    ["Weikfield Mango Jelly Mix", "90 g", 58, 60],
+    ["Betty Crocker Classic Pancake Mix (Original)", "250 g", 166, 195],
+    ["Keya Pizza Oregano", "80 g", 99, 119],
+    ["Keya Red Chilli Flakes", "40 g", 86, 99],
+    ["iD Idli & Dosa Batter", "1 kg", 130],
+    ["Amma's Special Dosa/Idli Batter", "1 kg", 99],
+    ["Vezlay Ready to Cook Plant Based Meat", "200 g", 238, 250],
+    ["PFC Foods Plant-Based Classic Chicken Nuggets", "400 g", 308, 350],
+    ["Samyang Ramen Instant Noodles - Hot Chicken Flavour", "140 g", 131, 140],
+    ["Del Monte Foodcraft Durum Wheat Pasta - Spaghetti", "400 g", 69, 89]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

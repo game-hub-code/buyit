@@ -3,20 +3,92 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Personal Care | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Personal Care</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "personal-care",          // file name without .html; also image folder + cart id prefix
+  title: "Personal Care",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Face & Body Moisturizers
+    ["Vaseline Intensive Care Deep Moisture Body Lotion", "400 ml", 300, 375],
+    ["Nivea Cocoa Nourish Body Lotion", "400 ml", 340, 425],
+    // Bath & Beauty Gifts
+    ["Nivea Men Deep Impact Gift Pack", "1 set", 449, 599],
+    ["Fiama Shower Gel Gift Pack", "1 set", 399, 550],
+    // Feminine Care
+    ["Whisper Ultra Clean Sanitary Pads XL+", "30 pcs", 260, 300],
+    ["Stayfree Secure Cottony Soft XL", "20 pcs", 150, 175],
+    // Oral Care
+    ["Colgate Strong Teeth Toothpaste", "200 g", 110, 125],
+    ["Sensodyne Fresh Mint Toothpaste", "150 g", 230, 260],
+    // Handwash
+    ["Dettol Liquid Handwash Refill Original", "750 ml", 130, 160],
+    ["Lifebuoy Total 10 Handwash Refill", "750 ml", 120, 150],
+    // Face Cleaning
+    ["Garnier Micellar Cleansing Water", "125 ml", 165, 199],
+    ["Pond's Cold Cream", "100 ml", 130, 150],
+    // Men's Grooming
+    ["Gillette Mach3 Razor", "1 pc", 230, 270],
+    ["Gillette Classic Regular Shaving Foam", "418 g", 300, 340],
+    // Sunscreen
+    ["Lakme Sun Expert SPF 50 Ultra Matte Gel", "50 ml", 375, 450],
+    ["Neutrogena Ultra Sheer Dry-Touch Sunscreen SPF 50+", "88 ml", 620, 750],
+    // Hair Care
+    ["Head & Shoulders Cool Menthol Shampoo", "650 ml", 470, 550],
+    ["Dove Intense Repair Shampoo", "650 ml", 460, 540],
+    // Deodorant & Talc
+    ["Fogg Marco Deodorant Spray", "150 ml", 190, 225],
+    ["Pond's Dreamflower Fragrant Talc", "400 g", 260, 300],
+    // Women's Grooming
+    ["Veet Sensitive Skin Hair Removal Cream", "100 g", 140, 170],
+    ["Gillette Venus Simply Venus Razor", "1 pc", 200, 240],
+    // Skin & Hair Care
+    ["Vaseline Original Petroleum Jelly", "100 ml", 95, 110],
+    ["Parachute Pure Coconut Oil", "600 ml", 250, 285],
+    // Face Wash
+    ["Himalaya Purifying Neem Face Wash", "150 ml", 165, 190],
+    ["Cetaphil Gentle Skin Cleanser", "125 ml", 420, 480],
+    // Bathing Soaps
+    ["Dove Cream Beauty Bathing Bar", "3 x 100 g", 170, 205],
+    ["Lux Soft Touch Soap", "4 x 100 g", 190, 220],
+    // Face Moisturisers
+    ["Nivea Soft Light Moisturiser", "300 ml", 350, 420],
+    ["Neutrogena Hydro Boost Water Gel", "50 g", 680, 799],
+    // Shower Gels & Body Wash
+    ["Dove Deeply Nourishing Body Wash", "800 ml", 520, 620],
+    ["Fiama Magnolia & Ylang Ylang Shower Gel", "250 ml", 190, 240],
+    // Bathing
+    ["Pears Pure & Gentle Soap", "3 x 125 g", 230, 270],
+    ["Santoor Sandal & Turmeric Soap", "4 x 100 g", 165, 195]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

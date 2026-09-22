@@ -3,20 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sauces &amp; Spreads | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Sauces &amp; Spreads</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "sauces-spreads",          // file name without .html; also image folder + cart id prefix
+  title: "Sauces & Spreads",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Tomato & Chilli Ketchup
+    ["Kissan Fresh Tomato Ketchup", "950 g", 140, 155],
+    ["Maggi Hot & Sweet Tomato Chilli Sauce", "500 g", 110, 125],
+    // Asian Sauces
+    ["Ching's Secret Schezwan Chutney", "250 g", 85, 100],
+    ["Ching's Secret Dark Soy Sauce", "200 ml", 55, 65],
+    // Mayonnaise
+    ["Veeba Eggless Mayonnaise", "250 g", 75, 90],
+    ["Funfoods Veg Mayonnaise", "250 g", 80, 95],
+    // Peanut Butter
+    ["Pintola All Natural Peanut Butter Creamy", "350 g", 175, 225],
+    ["Sundrop Peanut Butter Creamy", "462 g", 190, 230],
+    // Jam & Spreads
+    ["Kissan Mixed Fruit Jam", "500 g", 150, 175],
+    ["Nutella Hazelnut Spread with Cocoa", "350 g", 385, 420],
+    // Honey & Chyawanprash
+    ["Dabur Honey", "500 g", 215, 260],
+    ["Dabur Chyawanprash", "1 kg", 385, 425],
+    // Syrups
+    ["Hershey's Chocolate Syrup", "623 g", 235, 270],
+    ["Hamdard Rooh Afza", "750 ml", 210, 235],
+    // Indian Chutney & Pickle
+    ["Mother's Recipe Mango Pickle", "400 g", 125, 140],
+    ["Mother's Recipe Mixed Pickle", "400 g", 125, 140],
+    // Dips & Salad Dressings
+    ["Veeba Thousand Island Dressing", "300 g", 130, 155],
+    ["Veeba Cheese & Jalapeno Dip", "250 g", 125, 150],
+    // Table Sauces
+    ["Ching's Secret Green Chilli Sauce", "190 g", 50, 60],
+    ["Tops Red Chilli Sauce", "200 g", 40, 50],
+    // Cooking Sauces & Vinegar
+    ["Funfoods Pizza & Pasta Sauce", "325 g", 110, 130],
+    ["Del Monte White Vinegar", "385 ml", 55, 65],
+    // Imported Spreads
+    ["Lotus Biscoff Cookie Butter Spread", "400 g", 360, 420],
+    ["Skippy Creamy Peanut Butter", "340 g", 350, 399]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

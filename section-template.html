@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Section | buyit</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
+  </section>
+</main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "dairy-bread-eggs",          // file name without .html; also image folder + cart id prefix
+  title: "Dairy, Bread & Eggs",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    ["Full Cream Milk", "500 ml", 34],
+    ["Toned Milk", "1 L", 62, 66],
+    ["Brown Bread", "400 g", 45, 50],
+    ["Farm Eggs", "6 pcs", 60]
+  ]
+};
+</script>
+<script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
+<script src="js/header.js"></script>
+<script src="js/section.js"></script>
+</body>
+</html>

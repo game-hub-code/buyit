@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Cart | buyit</title>
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main class="cart-page">
+
+  <div class="cart-layout" id="cart-layout" hidden>
+    <section class="cart-items" aria-labelledby="cart-title">
+      <div class="cart-items-head">
+        <h1 id="cart-title">My Cart</h1>
+        <span class="cart-items-count" id="cart-items-count"></span>
+      </div>
+      <div class="cart-items-list" id="cart-items-list"></div>
+    </section>
+
+    <aside class="cart-summary" aria-labelledby="summary-title">
+      <div class="summary-card">
+        <h2 id="summary-title">Bill details</h2>
+        <dl class="summary-rows" id="summary-rows"></dl>
+        <div class="summary-total" id="summary-total"></div>
+        <button type="button" class="pay-btn" id="proceed-btn">Proceed to Pay</button>
+        <p class="summary-note">You'll enter your UPI ID on the next step. Delivery in 10 minutes.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="cart-empty" id="cart-empty" hidden>
+    <div class="cart-empty-art" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="72" height="72" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20.5 8H6"/></svg>
+    </div>
+    <h1>Your cart is empty</h1>
+    <p>Looks like you haven't added anything yet.</p>
+    <a class="back" href="index.html">Start shopping</a>
+  </section>
+
+</main>
+
+<!-- checkout overlay -->
+<div class="checkout-overlay" id="checkout-overlay" hidden>
+  <div class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+
+    <div class="checkout-pane" id="pane-payment">
+      <div class="checkout-head">
+        <h2 id="checkout-title">Pay via UPI</h2>
+        <button type="button" class="modal-close" id="checkout-close" aria-label="Close">&times;</button>
+      </div>
+
+      <div class="pay-fields">
+        <label class="pfield">UPI ID<input type="text" id="f-upi" placeholder="yourname@upi" pattern="[\w.\-]{2,}@[A-Za-z]{2,}" title="Enter a valid UPI ID, e.g. name@upi" autocomplete="off" required></label>
+        <label class="tip-row"><input type="checkbox" id="f-tip"> Add &#8377;20 tip for your delivery partner</label>
+      </div>
+
+      <div class="checkout-foot">
+        <div class="checkout-amount">
+          <span>Amount to pay</span>
+          <strong id="checkout-amount-val"></strong>
+        </div>
+        <button type="button" class="pay-btn" id="pay-btn">Pay</button>
+      </div>
+    </div>
+
+    <div class="checkout-pane" id="pane-confirm" hidden>
+      <div class="confirm-head">
+        <div class="confirm-tick" aria-hidden="true">
+          <svg viewBox="0 0 52 52" width="52" height="52"><circle pathLength="100" cx="26" cy="26" r="25" fill="none" stroke="currentColor" stroke-width="2"/><path pathLength="100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 17-17"/></svg>
+        </div>
+        <h2>Order placed!</h2>
+        <p id="confirm-sub"></p>
+      </div>
+
+      <div class="receipt" id="receipt"></div>
+
+      <div class="checkout-foot confirm-foot">
+        <button type="button" class="ghost-btn" id="print-btn">Print receipt</button>
+        <button type="button" class="pay-btn" id="continue-btn">Continue shopping</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
+<script src="js/header.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

@@ -3,20 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home &amp; Office | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Home &amp; Office</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "home-office",          // file name without .html; also image folder + cart id prefix
+  title: "Home & Office",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Spiritual & Religious Needs
+    ["Cycle Pure Three-in-One Agarbatti", "1 pack", 95, 110],
+    ["Mangaldeep Sandal Agarbatti", "1 pack", 60, 70],
+    // Home Decor
+    ["Philips Decorative LED String Light", "1 pc", 599, 799],
+    ["Wipro Garnet Decorative LED String Light", "1 pc", 450, 599],
+    // Festive & Occasion Needs
+    ["Cycle Pure Pooja Camphor", "1 pack", 70, 80],
+    ["Ganesh Rangoli Colour Powder", "1 pack", 60, 75],
+    // Tissues & Disposables
+    ["Origami Facial Tissue Box", "100 pulls", 60, 70],
+    ["Kleenex Facial Tissue Box", "100 pulls", 75, 90],
+    // Bathroom Essentials
+    ["Cello Plastic Bathroom Bucket", "18 L", 220, 275],
+    ["Cello Plastic Bathroom Mug", "1 pc", 60, 80],
+    // Sports & Fitness
+    ["Yonex Mavis 350 Nylon Shuttlecock", "6 pcs", 550, 650],
+    ["Boldfit Skipping Rope", "1 pc", 199, 399],
+    // Car & Bike Care
+    ["Turtle Wax Power Out Car Wash Shampoo", "500 ml", 260, 320],
+    ["Motul C2 Chain Lube", "150 ml", 450, 520],
+    // Party Essentials
+    ["Party Propz Happy Birthday Banner", "1 pc", 120, 199],
+    ["Funcart Metallic Balloons", "50 pcs", 110, 199],
+    // Home Improvement
+    ["Taparia Screwdriver Set", "1 set", 250, 320],
+    ["Stanley Measuring Tape", "5 m", 300, 380],
+    // Car Accessories
+    ["Ambi Pur Car Air Freshener Vent Clip", "1 pc", 250, 299],
+    ["Godrej aer Click Car Freshener", "1 pc", 195, 230],
+    // Home Furnishing
+    ["Nilkamal Plastic Stool", "1 pc", 280, 350],
+    ["Solimo Laundry Basket", "1 pc", 399, 599],
+    // Gift Card
+    ["Amazon Pay Gift Card", "₹500", 500],
+    ["Google Play Gift Code", "₹500", 500],
+    // Flowers, Plants & Gardening
+    ["Ugaoo Money Plant with Pot", "1 pc", 199, 299],
+    ["Ugaoo Organic Vermicompost", "1 kg", 99, 149],
+    // Pillows and Body Positioners
+    ["Sleepwell Microfiber Pillow", "1 pc", 399, 599],
+    ["Wakefit Orthopedic Memory Foam Cervical Pillow", "1 pc", 899, 1299],
+    // Soft Furnishing
+    ["Bombay Dyeing Cushion Covers", "5 pcs", 349, 599],
+    ["Divine Casa Door Curtain", "1 pc", 399, 699],
+    // Floor Furnishing
+    ["Kuber Industries Door Mat", "1 pc", 199, 299],
+    ["Saral Home Anti-Skid Floor Mat", "1 pc", 249, 399],
+    // Bike Accessories
+    ["Steelbird SBH-11 Full Face Helmet", "1 pc", 1100, 1499],
+    ["Bobo BM1 Jaw-Grip Bike Phone Mount", "1 pc", 599, 999],
+    // Bed & Bath Linen
+    ["Bombay Dyeing Cotton Double Bedsheet", "1 set", 899, 1499],
+    ["Spaces Cotton Bath Towel", "1 pc", 449, 699],
+    // Travel Cards
+    ["Mumbai One Card", "1 pc", 100],
+    ["Delhi Metro Tourist Card", "1 pc", 200]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

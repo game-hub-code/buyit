@@ -1,0 +1,9 @@
+{
+  "name": "buyit",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build-search.js",
+    "watch": "node tools/build-search.js --watch",
+    "check": "node tools/build-search.js --check"
+  }
+}

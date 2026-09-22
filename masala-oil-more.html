@@ -3,20 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Masala, Oil &amp; More | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Masala, Oil &amp; More</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "masala-oil-more",          // file name without .html; also image folder + cart id prefix
+  title: "Masala, Oil & More",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Oil
+    ["Fortune Sunlite Refined Sunflower Oil", "1 L", 135, 155],
+    ["Fortune Premium Kachi Ghani Pure Mustard Oil", "1 L", 165, 185],
+    // Dry Fruits
+    ["Happilo Premium California Almonds", "200 g", 190, 250],
+    ["Nutraj Premium Whole Cashews", "250 g", 260, 320],
+    // Ghee & Vanaspati
+    ["Amul Pure Ghee", "1 L", 640, 675],
+    ["Dalda Vanaspati", "1 L", 145, 160],
+    // Whole Spices
+    ["Tata Sampann Cumin Seeds (Jeera)", "100 g", 55, 65],
+    ["Catch Black Pepper Whole", "50 g", 60, 70],
+    // Powdered Spice
+    ["Everest Turmeric Powder (Haldi)", "200 g", 55, 62],
+    ["MDH Deggi Mirch Red Chilli Powder", "100 g", 75, 85],
+    // Dates & Seeds
+    ["Lion Dates Seedless", "500 g", 150, 180],
+    ["Happilo Premium Chia Seeds", "200 g", 130, 180],
+    // Salt, Sugar & Jaggery
+    ["Tata Salt Iodised", "1 kg", 28, 30],
+    ["Madhur Pure & Hygienic Sugar", "1 kg", 55, 60],
+    // Papad & Fryums
+    ["Lijjat Urad Papad", "200 g", 65, 70],
+    ["Lijjat Punjabi Masala Papad", "200 g", 70, 75],
+    // Dry Fruit Gift Packs
+    ["Happilo Premium Assorted Dry Fruits Gift Box", "500 g", 749, 999],
+    ["Nutraj Assorted Dry Fruits Gift Pack", "400 g", 599, 799],
+    // Gravy Mixes & Pastes
+    ["Kitchens of India Paneer Butter Masala Paste", "80 g", 70, 80],
+    ["Smith & Jones Ginger Garlic Paste", "200 g", 55, 65],
+    // Whole Herbs
+    ["Everest Kasuri Methi", "25 g", 40, 45],
+    ["Keya Dried Oregano", "20 g", 55, 65]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

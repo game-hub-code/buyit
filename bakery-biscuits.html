@@ -3,20 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bakery &amp; Biscuits | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Bakery &amp; Biscuits</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "bakery-biscuits",          // file name without .html; also image folder + cart id prefix
+  title: "Bakery & Biscuits",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    ["Open Secret Celebration Chocolate Biscuits Gift Pack (Zero Maida)", "150 g", 278, 350],
+    ["The Baker's Dozen Danish Style Butter Cookies Gift Pack", "150 g", 201, 225],
+    ["Harvest Gold 100% Atta Whole Wheat Bread", "450 g", 62, 65],
+    ["Bonn Extra Soft Pav Bread", "250 g", 36, 40],
+    ["Hide & Seek Choco Chip Cookies", "100 g", 29, 30],
+    ["Britannia Good Day Butter Cookies", "248 g", 38, 40],
+    ["Oreo Vanilla Flavour Sandwich Cream Biscuits", "125.25 g", 38, 40],
+    ["Britannia Original Bourbon Creme Biscuit", "150 g", 26],
+    ["Parle-G Original Gluco Biscuit", "800 g", 84, 90],
+    ["Britannia Marie Gold Marie Biscuits", "208 g", 38, 40],
+    ["Britannia NutriChoice Digestive High-Fibre Biscuit", "125 g", 25],
+    ["Sunfeast Farmlite Oats & Almonds Cookies", "150 g", 68, 75],
+    ["Britannia Toastea Premium Bake Rusk", "250 g", 42, 50],
+    ["Parle Real Elaichi Premium Rusk", "291.2 g", 54, 60],
+    ["Britannia Gobbles Fruity Fun Slice Cake", "60 g", 25],
+    ["Cadbury Rich & Fudgy Brownie", "114 g", 85, 100],
+    ["Fab Vintage French Vanilla Essence", "100 ml", 210, 225],
+    ["Weikfield Baking Powder", "100 g", 45],
+    ["Sunfeast Wowzers Cheese Crackers Biscuit", "128 g", 49, 56],
+    ["Britannia 5050 Cheeze Dipped Biscuit", "150 g", 45, 50],
+    ["Lotus Biscoff Original Caramelized Cookies", "225 g", 105, 110],
+    ["The Baker's Dozen Dark Chocolate Cookies", "100 g", 119]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>

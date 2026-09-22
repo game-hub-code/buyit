@@ -3,20 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pharma &amp; Wellness | buyit</title>
+<title>Section | buyit</title>
 <script src="js/theme.js"></script>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header id="site-header"></header>
-<main>
-  <section class="stub">
-    <h1>Pharma &amp; Wellness</h1>
-    <p>This section is ready to build.</p>
-    <a class="back" href="index.html">Back to home</a>
+<main class="pc-main">
+  <section class="pc-card" aria-labelledby="pc-title">
+    <h1 class="pc-title" id="pc-title"></h1>
+    <div class="pc-content">
+      <p class="pc-note" id="pc-note" hidden>Available for adults aged 18 and above only.</p>
+      <div class="pc-grid" id="pc-grid"></div>
+    </div>
   </section>
 </main>
+
+<!--
+  HOW TO USE
+  1. Copy this file to <slug>.html (e.g. dairy-bread-eggs.html). Slug must match js/categories.js.
+  2. Edit ONLY the SECTION block below.
+  3. Put images in images/<slug>/<slug>-01.avif, -02, ... (same order as products; png/jpg/jpeg/webp/svg also work).
+     Missing image = letter placeholder.
+-->
+<script>
+window.SECTION = {
+  slug: "pharma-wellness",          // file name without .html; also image folder + cart id prefix
+  title: "Pharma & Wellness",      // page heading + browser tab
+  adult: false,                      // true = show "18 and above only" note
+  products: [                        // [name, unit label, price, MRP (optional, shows % OFF)]
+    // Sexual Wellness
+    ["Durex Extra Time Condoms", "10 pcs", 190, 215],
+    ["Manforce Dotted Condoms", "10 pcs", 110, 125],
+    // Adult Diapers
+    ["Friends Adult Diaper Pants (M)", "10 pcs", 450, 520],
+    ["Friends Adult Diaper Pants (L)", "10 pcs", 480, 550],
+    // Health & Wellness Supplements
+    ["Himalaya Ashvagandha Tablets", "60 tabs", 175, 195],
+    ["HealthKart HK Vitals Multivitamin", "60 tabs", 450, 599],
+    // Protein and Workout Supplements
+    ["MuscleBlaze Biozyme Performance Whey", "1 kg", 3400, 4499],
+    ["Optimum Nutrition Gold Standard 100% Whey", "2 lb", 4200, 5199],
+    // Antiseptic Liquid
+    ["Dettol Antiseptic Liquid", "250 ml", 120, 135],
+    ["Savlon Antiseptic Liquid", "200 ml", 95, 110],
+    // Masks & Sanitizers
+    ["Dettol Instant Hand Sanitizer", "200 ml", 90, 100],
+    ["3M 9004IN N95 Mask", "1 pc", 75, 95],
+    // Milk Drinks
+    ["Cadbury Bournvita Health Drink", "750 g", 340, 375],
+    ["Horlicks Classic Malt", "500 g", 260, 285],
+    // Smoking Cessation
+    ["Nicotex Nicotine Gum 2 mg (Mint)", "9 pcs", 100, 110],
+    ["Nicotex Nicotine Gum 4 mg (Mint)", "9 pcs", 110, 120],
+    // Herbal Drinks
+    ["Dabur Giloy Juice", "500 ml", 130, 150],
+    ["Kapiva Aloe Vera Juice", "1 L", 350, 449],
+    // Chyawanprash
+    ["Patanjali Chyawanprash", "1 kg", 250, 280],
+    ["Zandu Chyawanprash", "900 g", 340, 380],
+    // Healthcare Devices & Test Kits
+    ["Omron HEM-7120 Blood Pressure Monitor", "1 pc", 1800, 2499],
+    ["Dr Morepen Gluco One BG 03 Glucometer", "1 kit", 950, 1200],
+    // Health & Ortho Supports
+    ["Tynor Knee Cap", "1 pc", 260, 320],
+    ["Vissco Lumbo Sacral Belt", "1 pc", 550, 699],
+    // Non-Prescription Medicines
+    ["Dolo 650 Tablet", "15 tabs", 30, 32],
+    ["Digene Antacid Tablets (Mint)", "15 tabs", 25, 28],
+    // Prescription Medicines
+    ["Pan 40 Tablet (Pantoprazole)", "15 tabs", 160, 175],
+    ["Telma 40 Tablet (Telmisartan)", "15 tabs", 220, 245],
+    // Hangover Cure
+    ["Fast&Up Charge Effervescent Electrolyte", "20 tabs", 250, 300],
+    ["Electral ORS Powder", "21.8 g", 22, 24],
+    // Pure OTC
+    ["Vicks VapoRub", "25 ml", 100, 110],
+    ["Iodex Pain Relief Balm", "40 g", 130, 145]
+  ]
+};
+</script>
 <script src="js/config.js"></script>
+<script src="js/search-data.js"></script>
 <script src="js/header.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>
