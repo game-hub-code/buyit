@@ -9,7 +9,7 @@
 
   // ---- fly-to-cart animation settings ----
   var FLY_HOLD_MS = 500;                          // pause before the image starts moving, in ms
-  var FLY_DURATION_MS = 2200;                       // how long the move to the cart takes, in ms
+  var FLY_DURATION_MS = 1500;                       // how long the move to the cart takes, in ms
   var FLY_EASING = "cubic-bezier(.25,.1,.25,1)";   // ease-in-out curve for a smooth start/finish
   var FLY_END_SCALE = .15;                         // size the image shrinks to as it nears the cart
   var FLY_END_OPACITY = .4;                        // opacity the image fades to as it nears the cart
