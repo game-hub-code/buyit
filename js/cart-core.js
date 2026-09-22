@@ -94,17 +94,17 @@
           { transform: "translate(0, 0) scale(1)", opacity: 1 },
           { transform: "translate(" + dx + "px, " + dy + "px) scale(.15)", opacity: .4 }
         ],
-        { duration: 800, easing: "cubic-bezier(.3,.6,.4,1)" }
+        { duration: 900, easing: "cubic-bezier(.25,.1,.25,1)" }
       );
       anim.onfinish = function () { fly.remove(); };
     } else {
       // Web Animations API unavailable: fall back to a CSS transition.
-      fly.style.transition = "transform .45s cubic-bezier(.3,.6,.4,1), opacity .45s";
+      fly.style.transition = "transform .9s cubic-bezier(.25,.1,.25,1), opacity .9s";
       requestAnimationFrame(function () {
         fly.style.transform = "translate(" + dx + "px, " + dy + "px) scale(.15)";
         fly.style.opacity = ".4";
       });
-      setTimeout(function () { fly.remove(); }, 470);
+      setTimeout(function () { fly.remove(); }, 920);
     }
   }
 
