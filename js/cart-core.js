@@ -94,7 +94,7 @@
           { transform: "translate(0, 0) scale(1)", opacity: 1 },
           { transform: "translate(" + dx + "px, " + dy + "px) scale(.15)", opacity: .4 }
         ],
-        { duration: 450, easing: "cubic-bezier(.3,.6,.4,1)" }
+        { duration: 800, easing: "cubic-bezier(.3,.6,.4,1)" }
       );
       anim.onfinish = function () { fly.remove(); };
     } else {
